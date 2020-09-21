@@ -6,3 +6,5 @@ Makes use of the following:
 - Custom Hooks
 - Styled Components
 - ES6 Syntax
+
+![tetris](https://github.com/kaylacrane/react-tetris/blob/master/react-tetris.JPG?raw=true)
