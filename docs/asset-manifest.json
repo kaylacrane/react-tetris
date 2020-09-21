@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "./static/css/main.25c3e660.chunk.css",
+    "main.js": "./static/js/main.7d1a6fd3.chunk.js",
+    "main.js.map": "./static/js/main.7d1a6fd3.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.45ecce0e.js",
+    "runtime-main.js.map": "./static/js/runtime-main.45ecce0e.js.map",
+    "static/js/2.d6b06c9e.chunk.js": "./static/js/2.d6b06c9e.chunk.js",
+    "static/js/2.d6b06c9e.chunk.js.map": "./static/js/2.d6b06c9e.chunk.js.map",
+    "index.html": "./index.html",
+    "precache-manifest.b716c38edf2fa686d9969467f3234673.js": "./precache-manifest.b716c38edf2fa686d9969467f3234673.js",
+    "service-worker.js": "./service-worker.js",
+    "static/css/main.25c3e660.chunk.css.map": "./static/css/main.25c3e660.chunk.css.map",
+    "static/js/2.d6b06c9e.chunk.js.LICENSE.txt": "./static/js/2.d6b06c9e.chunk.js.LICENSE.txt",
+    "static/media/index.css": "./static/media/Pixel-LCD-7.e2897552.woff",
+    "static/media/universe.jpg": "./static/media/universe.45feccda.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.45ecce0e.js",
+    "static/js/2.d6b06c9e.chunk.js",
+    "static/css/main.25c3e660.chunk.css",
+    "static/js/main.7d1a6fd3.chunk.js"
+  ]
+}
