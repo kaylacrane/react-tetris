@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { createStage, checkCollision } from "../gameHelpers";
 //styled components
+import { StyledControls } from "./styles/StyledControls";
 import { StyledTetrisWrapper, StyledTetris } from "./styles/StyledTetris";
 //custom hooks
 import { useInterval } from "../hooks/useInterval";
@@ -75,7 +76,7 @@ const Tetris = () => {
   };
 
   const dropPlayer = () => {
-    setDropTime(null); /* to stop interval when player presses key*/
+    // setDropTime(null); /* to stop interval when player presses key*/
     drop();
   };
 
@@ -101,6 +102,10 @@ const Tetris = () => {
       }
     }
   };
+  const handleArrowButtons = (event) => {
+    const keyCode = parseInt(event.target.dataset.keycode);
+    move({ keyCode });
+  };
 
   return (
     <StyledTetrisWrapper
@@ -111,6 +116,24 @@ const Tetris = () => {
     >
       <StyledTetris>
         <Stage stage={stage} />
+        <StyledControls onMouseDown={handleArrowButtons}>
+          <span
+            className="up-button control-button fas fa-arrow-alt-circle-up"
+            data-keycode="38"
+          ></span>
+          <span
+            className="left-button control-button fas fa-arrow-alt-circle-left"
+            data-keycode="37"
+          ></span>
+          <span
+            className="right-button control-button fas fa-arrow-alt-circle-right"
+            data-keycode="39"
+          ></span>
+          <span
+            className="down-button control-button fas fa-arrow-alt-circle-down"
+            data-keycode="40"
+          ></span>
+        </StyledControls>
         <aside>
           {gameOver ? (
             <Display gameOver={gameOver} text="Game Over" />

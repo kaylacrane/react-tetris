@@ -1,5 +1,5 @@
 export const STAGE_WIDTH = 12;
-export const STAGE_HEIGHT = 20;
+export const STAGE_HEIGHT = 28;
 
 //creates an array that contains an array of cells for each row
 export const createStage = () =>
