@@ -30,7 +30,25 @@ export const StyledTetris = styled.div`
   aside {
     width: 100%;
     max-width: 200px;
-    display: block;
+    display: flex;
     padding: 0 20px;
+    flex-direction: column;
+    & .info-area {
+      display: flex;
+      flex-direction: column;
+    }
+    @media all and (min-width: 760px) {
+      max-width: 650px;
+      & .info-area {
+        flex-direction: row;
+        justify-content: space-evenly;
+      }
+    }
+    @media all and (min-width: 1200px) {
+      & .info-area {
+        flex-direction: column;
+        max-width: 100%;
+      }
+    }
   }
 `;

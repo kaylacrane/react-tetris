@@ -7,11 +7,21 @@ export const StyledStartButton = styled.button`
   min-height: 30px;
   width: 100%;
   border-radius: 20px;
-  border: none;
   color: white;
   background: #333;
   font-family: Pixel, Arial, Helvetica, sans-serif;
   font-size: 1rem;
-  outline: none;
   cursor: pointer;
+  outline: none;
+  border: none;
+  @media all and (min-width: 760px) {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    padding: 30px;
+    max-width: 50%;
+    margin: 0 auto;
+  }
+  @media all and (min-width: 1200px) {
+    max-width: 100%;
+  }
 `;

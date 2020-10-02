@@ -35,7 +35,7 @@ const Tetris = () => {
       if (keyCode === 40) {
         console.log("interval on");
         /*40 is down arrow so this only resets when player releases down arrow*/
-        setDropTime(1000 / (level + 1));
+        setDropTime(900 / (level + 1));
       }
     }
   };
@@ -63,7 +63,6 @@ const Tetris = () => {
     } else {
       // Game Over - position <1 because we're at top of screen
       if (player.pos.y < 1) {
-        console.log("GAME OVER!!!");
         setGameOver(true);
         setDropTime(null);
       }
@@ -106,7 +105,7 @@ const Tetris = () => {
     const keyCode = parseInt(event.target.dataset.keycode);
     move({ keyCode });
   };
-
+  const windowSize = window.screen.width;
   return (
     <StyledTetrisWrapper
       role="button"
@@ -116,29 +115,33 @@ const Tetris = () => {
     >
       <StyledTetris>
         <Stage stage={stage} />
-        <StyledControls onMouseDown={handleArrowButtons}>
-          <span
-            className="up-button control-button fas fa-arrow-alt-circle-up"
-            data-keycode="38"
-          ></span>
-          <span
-            className="left-button control-button fas fa-arrow-alt-circle-left"
-            data-keycode="37"
-          ></span>
-          <span
-            className="right-button control-button fas fa-arrow-alt-circle-right"
-            data-keycode="39"
-          ></span>
-          <span
-            className="down-button control-button fas fa-arrow-alt-circle-down"
-            data-keycode="40"
-          ></span>
-        </StyledControls>
+        {windowSize < 1200 ? (
+          <StyledControls onMouseDown={handleArrowButtons}>
+            <button
+              className="up-button control-button fas fa-arrow-alt-circle-up"
+              data-keycode="38"
+            ></button>
+            <button
+              className="left-button control-button fas fa-arrow-alt-circle-left"
+              data-keycode="37"
+            ></button>
+            <button
+              className="right-button control-button fas fa-arrow-alt-circle-right"
+              data-keycode="39"
+            ></button>
+            <button
+              className="down-button control-button fas fa-arrow-alt-circle-down"
+              data-keycode="40"
+            ></button>
+          </StyledControls>
+        ) : (
+          ""
+        )}
         <aside>
           {gameOver ? (
             <Display gameOver={gameOver} text="Game Over" />
           ) : (
-            <div>
+            <div className="info-area">
               <Display text={`Score: ${score}`} />
               <Display text={`Rows: ${rows}`} />
               <Display text={`Level: ${level}`} />

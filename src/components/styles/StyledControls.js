@@ -7,12 +7,15 @@ export const StyledControls = styled.div`
   width: 100%;
   margin-bottom: 20px;
   & > .control-button {
+    background: #333;
     font-size: 60px;
-
     border-radius: 50%;
     text-align: center;
+    transition: color 0.8s linear;
+    outline: none;
+    border: none;
     &:active {
-      color: #111;
+      color: gold;
     }
   }
   & > .up-button {
@@ -31,5 +34,10 @@ export const StyledControls = styled.div`
   & > .down-button {
     grid-column: 2;
     grid-row: 2;
+  }
+  @media all and (min-width: 768px) {
+    & > .control-button {
+      font-size: 80px;
+    }
   }
 `;

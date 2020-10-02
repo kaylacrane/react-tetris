@@ -11,11 +11,14 @@ export const StyledDisplay = styled.div`
   min-height: 30px;
   width: 100%;
   border-radius: 20px;
-  color: ${(props) => (props.gameOver ? "red" : "#999")};
+  color: ${(props) => (props.gameOver ? "red" : "yellow")};
   background: #000;
   font-family: Pixel, Arial, Helvetica, sans-serif;
   font-size: 0.8rem;
+
   @media all and (min-width: 768px) {
+    font-size: 1.25rem;
+    letter-spacing: 2px;
   }
   @media all and (min-width: 1200px) {
     flex-direction: row;
