@@ -1,5 +1,5 @@
 # Tetris using ReactJS
-Made by following the [Udemy course](https://www.udemy.com/course/intermediate-react-tetris/) called React Tetris with Hooks API
+Based on code from the [Udemy course](https://www.udemy.com/course/intermediate-react-tetris/) called React Tetris with Hooks API. I added the mobile/tablet controls.
 
 Makes use of the following:
 - React Hooks
